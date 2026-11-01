@@ -1,8 +1,8 @@
 class Xcpurge < Formula
   desc "Find unused assets, localized strings and files in Xcode/SwiftPM projects"
   homepage "https://github.com/iasaeed/xcpurge"
-  url "https://github.com/iasaeed/xcpurge/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "e35398fbb8f53bc6f15c17a256ca1bd7ffdd2a1833cbb3edb1f21c467ab589c9"
+  url "https://github.com/iasaeed/xcpurge/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "698cef691e312214d939ea876c7d15ef6abf3a92e1c1ccd8ad06a54545034b59"
   license "MIT"
   head "https://github.com/iasaeed/xcpurge.git", branch: "main"
 
@@ -15,6 +15,6 @@ class Xcpurge < Formula
   end
 
   test do
-    assert_match "0.4.0", shell_output("#{bin}/xcpurge --version")
+    assert_match "0.5.0", shell_output("#{bin}/xcpurge --version")
   end
 end
