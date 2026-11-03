@@ -1,9 +1,9 @@
 class Xcblame < Formula
   desc "Measure, explain and fix Xcode build time, locally and in CI"
   homepage "https://github.com/iasaeed/homebrew-tap"
-  version "0.4.0"
-  url "https://github.com/iasaeed/homebrew-tap/releases/download/xcblame-v0.4.0/xcblame-0.4.0-macos-universal.tar.gz"
-  sha256 "20aa1ea0dcbe82841389cc848b0622b78430747b36e1f4052c401f3dfbc02c12"
+  version "0.5.0"
+  url "https://github.com/iasaeed/homebrew-tap/releases/download/xcblame-v0.5.0/xcblame-0.5.0-macos-universal.tar.gz"
+  sha256 "4ccd5b847dbdc5b2b070d4e2c61aef086269d8261fafb4b35ad98009402c95e6"
 
   depends_on macos: :sonoma
 
