@@ -52,6 +52,13 @@ Everything after `--` goes to `xcodebuild` unchanged.
 | Compare two builds | `xcblame compare before.json after.json` |
 | See how build time changes over days | `xcblame trend --kind incremental` |
 | Read what a finding means | `xcblame rules explain SET-001` |
+| Verify a fix | `xcblame verify --rules SET-005 --kind clean -- -scheme MyApp` |
+| Apply a kept fix | `xcblame fix --rules SET-005 --apply` |
+| Deliver fixes on CI without editing the project | `xcblame build --overlay -- -scheme MyApp` |
+
+## Fix and verify
+
+`xcblame verify` builds your project several times with and without a proposed change, and keeps the change only when it is faster by more than the normal run-to-run noise and nothing broke. `xcblame fix --apply` then writes the kept changes as an xcconfig overlay file, which you can revert at any time. Nothing in your project file is edited. On CI, `xcblame build --overlay` builds with the same overlay, so the whole team and the pipeline get the saving without touching the project.
 
 ## Reading the report
 
