@@ -62,11 +62,13 @@ Everything after `--` goes to `xcodebuild` unchanged.
 
 ## Reading the report
 
+Since 0.6.1 the first screen of the HTML report shows only the build time, the floor (the critical path), the waste and up to three actions to take first. Everything else is collapsed below it.
+
 - **Build kind**: clean, incremental, zero-change or cached. Only compare builds of the same kind.
 - **Critical path**: the chain of tasks that set the total time. Making anything off this chain faster does not shorten the build.
 - **Xcode's own work**: planning, linking, code signing. Shown separately so you don't blame your code for it.
 - **Fix plan**: concrete changes in a safe order, each with the Xcode setting name and the measured or estimated saving.
-- **Glossary**: every term used in the report is explained at the bottom of the page.
+- **Glossary**: every term used in the report is defined in [REPORT.md](https://github.com/iasaeed/xcblame/blob/main/docs/REPORT.md).
 
 ## Use it in CI
 
